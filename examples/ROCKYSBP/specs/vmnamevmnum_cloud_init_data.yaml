@@ -1,0 +1,9 @@
+|-
+#cloud-config
+fqdn: @@{HOSTNAME}@@
+
+users:
+  - name: @@{username}@@
+    ssh-authorized-keys:
+      - @@{INSTANCE_PUBLIC_KEY}@@
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
